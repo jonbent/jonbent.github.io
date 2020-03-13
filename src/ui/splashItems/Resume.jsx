@@ -6,7 +6,7 @@ const Resume = () => {
 
     return (
         <div className="Resume">
-            <iframe src="/files/jon_bent_resume.pdf" />
+            <iframe src="files/jon_bent_resume.pdf" />
         </div>
     );
 };
