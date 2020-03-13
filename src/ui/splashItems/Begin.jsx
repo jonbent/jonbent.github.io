@@ -22,7 +22,7 @@ class Begin extends Component {
         return (
             <div className="Begin">
                 <div className="headshot">
-                    <img src="images/headshot3.png" alt="Jon Bent"/>
+                    <img src="images/headshot_small.png" alt="Jon Bent"/>
                 </div>
                 <div className="description-container">
                     <div className="description">
