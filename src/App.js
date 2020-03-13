@@ -47,7 +47,7 @@ class App extends Component {
     render(){
         const {currentPageIndex, backgroundImage}= this.state;
         return (
-            <div className="App" style={{backgroundImage: `url(/images/${splashImages[backgroundImage]})`}}>
+            <div className="App" style={{backgroundImage: `url(images/${splashImages[backgroundImage]})`}}>
                 <nav className="nav">
                     <div className="same-page">
                         {navLinks.map((el, idx) => {
@@ -58,21 +58,21 @@ class App extends Component {
                     </div>
                     <div className="download">
                         <span onClick={() => this.changeIndex(2)}>
-                            <img src="/images/social/resume.svg" alt="Resume"/>
+                            <img src="images/social/resume.svg" alt="Resume"/>
                             Resume
                         </span>
                     </div>
                     <div className="new-page">
                         <a href="https://github.com/jonbent" target="_blank" rel="noopener noreferrer">
-                            <img src="/images/social/octicon.svg" alt="Github"/>
+                            <img src="images/social/octicon.svg" alt="Github"/>
                             Github
                         </a>
                         <a href="https://www.linkedin.com/in/jon-bent/" target="_blank" rel="noopener noreferrer">
-                            <img src="/images/social/linkedin.svg" alt="LinkedIn"/>
+                            <img src="images/social/linkedin.svg" alt="LinkedIn"/>
                             LinkedIn
                         </a>
                         <a href="https://angel.co/jon-bent-1" target="_blank" rel="noopener noreferrer">
-                            <img src="/images/social/angellist.svg" alt="AngelList"/>
+                            <img src="images/social/angellist.svg" alt="AngelList"/>
                             AngelList
                         </a>
                     </div>
