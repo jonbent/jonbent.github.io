@@ -1,0 +1,68 @@
+.ProjectItem:nth-of-type(1){
+  margin-top: 2rem;
+}
+.ProjectItem{
+  display: flex;
+  margin: 0 4rem 2rem;
+  padding: 1rem;
+  background-color: #282c34;
+  background-color: rgba(0, 0, 0, 0.5);
+  //opacity: 0.75;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 3px 3px 6px black;
+  .picture{
+    border-radius: 10px;
+    height: 100%;
+    width: 10rem;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition: background-image 500ms ease;
+  }
+  .title-and-desc{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    text-shadow: 1px 1px 3px black;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+    .title{
+      font-size: 150%;
+      color: #F3DFA2;
+    }
+    .description{
+      color: #EFFFFA;
+      white-space: pre-wrap;
+    }
+    .actions{
+      display: flex;
+      div:not(:nth-of-type(1)){
+        margin-left: 0.5rem;
+      }
+      a{
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        border: 1px solid #7cea9c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 150%;
+        color: #7cea9c;
+        text-shadow: 3px 3px 4px #404E4D;
+        text-decoration: none;
+      }
+      a:hover{
+          background-color: #7cea9c;
+          color:#404E4D;
+          cursor: pointer;
+        }
+
+    }
+  }
+  .title-and-desc > div{
+    padding: 0.5rem
+  }
+}

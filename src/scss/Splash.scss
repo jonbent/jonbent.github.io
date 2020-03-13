@@ -1,0 +1,57 @@
+.Splash{
+  height: 100%;
+  display: flex;
+  transition: transform 1.5s ease;
+  .Begin{
+    flex: 1 0 100%;
+    height: 100%;
+    width: 100%;
+    color: #DBDBDB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 200%;
+    text-shadow: 3px 3px 6px black;
+    .headshot{
+      position: relative;
+      min-width: 500px;
+      width: 500px;
+      img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        //width: 700px;
+        z-index: -1;
+      }
+    }
+    .description-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .garden{
+        background-color: rgba(0,0,0,0.5);
+        .contrib-number{
+          color: #BEDCFE;
+          text-shadow: 3px 3px 6px black;
+        }
+      }
+      .description{
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div:not(:nth-of-type(1)){
+          margin-top: 2rem;
+        }
+      }
+      svg.next-arrow{
+        cursor: pointer;
+        padding: 0.75rem;
+        border-radius: 50%;
+        background-color: #DBDBDB;
+      }
+    }
+  }
+}
