@@ -31,6 +31,12 @@ html, body, #root, .App{
       text-shadow: 1px 1px 3px black;
       cursor: pointer;
       color: #bedcfe;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none;
     }
 
     span.selected{
@@ -38,7 +44,7 @@ html, body, #root, .App{
     }
     .same-page{
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       align-items: center;
       span{
         transition: color 1.5s ease;
@@ -67,7 +73,6 @@ html, body, #root, .App{
           width: 1.1rem;
           padding: 0.25rem;
           background-color: white;
-          border-radius: 50%;
         }
       }
     }
