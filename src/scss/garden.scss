@@ -17,7 +17,6 @@
     text-align: right;
     padding: 0 14px 10px 0;
     display: inline-block;
-    float: right;
 }
 
 .contrib-legend .legend {
@@ -119,6 +118,12 @@ h2.f4.text-normal.mb-3 {
 
 .float-left.text-gray {
     float: left;
+}
+.float-left{
+    display: none;
+}
+.float-right.color-text-secondary{
+    font-size:medium;
 }
 #user-activity-overview{
     display:none;
