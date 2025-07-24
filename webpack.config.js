@@ -1,3 +1,10 @@
+import path from 'node:path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+
+const pdfjsDistPath = path.dirname(require.resolve('pdfjs-dist/package.json'));
+const cMapsDir = path.join(pdfjsDistPath, 'cmaps');
+const standardFontsDir = path.join(path.dirname(require.resolve('pdfjs-dist/package.json')), 'standard_fonts');
+
 module.exports = {
   module: {
     rules: [
@@ -14,7 +21,20 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+      new CopyWebpackPlugin({
+     patterns: [
+       {
+         from: cMapsDir,
+         to: 'cmaps/'
+       },
+       {
+         from: standardFontsDir,
+         to: 'standard_fonts/'
+       },
+     ],
+   }),
+  ]
 };
-Finally run webpack via your preferred method.
 
 

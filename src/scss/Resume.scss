@@ -3,9 +3,29 @@
   height: 100%;
   flex: 1 0 100%;
   display: flex;
-  flex-direction: column-reverse;
-  iframe{
-    height: calc(100% - 1.7rem);
-    width: 100%;
+  flex-direction: column;
+  overflow: scroll;
+  .react-pdf__Document{
+    margin-top: 1.7rem;
   }
+  .react-pdf__Page {
+    height: calc(100% - 1.7rem);
+    position: relative; /* Makes annotation layers align to canvas */
+    display: inline-block; /* Aligns the page contents inline */
+    text-align: center; /* Centers text and links */
+  }
+
+  .react-pdf__Page canvas {
+    display: block; /* Prevent inline spacing issues */
+    margin: 0 auto; /* Centers the canvas */
+  }
+
+  /* Ensures annotation layers (links, inputs, etc.) align with the canvas */
+  .react-pdf__Page__annotations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: auto; /* Allows clicking links */
+  }
+
 }

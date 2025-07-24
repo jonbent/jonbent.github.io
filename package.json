@@ -4,14 +4,16 @@
   "private": true,
   "homepage": "https://jonbent.github.io",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "^4.0.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "browserslist": "^4.16.5",
-    "glob-parent": "^5.1.2"
+    "github-calendar": "^2.3.4",
+    "glob-parent": "^6.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-pdf": "^10.0.1",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,8 +39,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.35.2",
-    "sass-loader": "^12.1.0"
+    "sass-loader": "^16.0.5"
   }
 }
