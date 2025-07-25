@@ -16,6 +16,7 @@ html, body, #root, .App{
   overflow: hidden;
   background-position: center center;
   transition-delay: 100ms;
+  background-image: linear-gradient(to bottom right, red, black);
   nav.nav{
     transition: background-color ease 500ms;
     text-align: start;
@@ -30,7 +31,7 @@ html, body, #root, .App{
       text-decoration: underline;
       text-shadow: 1px 1px 3px black;
       cursor: pointer;
-      color: #bedcfe;
+      color: #DBDBDB;
       -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */
@@ -40,7 +41,7 @@ html, body, #root, .App{
     }
 
     span.selected{
-      color: red;
+      color: #7cea9c;
     }
     .same-page{
       display: flex;
@@ -60,10 +61,14 @@ html, body, #root, .App{
       flex-direction: row-reverse;
     }
     .new-page, .download{
+      span.selected{
+        color: #7cea9c;
+      }
       display: flex;
       a, span{
-        color: #BEDCFE;
-        text-decoration: none;
+        text-shadow: 1px 1px 3px black;
+        color: #DBDBDB;
+        text-decoration: underline;
         display: flex;
         justify-content: center;
         align-items: center;

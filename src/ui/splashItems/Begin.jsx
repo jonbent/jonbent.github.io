@@ -2,38 +2,26 @@ import React, {Component} from 'react';
 import Arrow from "../../svg/Arrow";
 import GitHubCalendar from 'react-github-calendar';
 
-// import '../../scss/garden.scss';
-class Begin extends Component {
-    // componentDidMount() {
-        // GitHubCalendar('.garden', 'jonbent', {responsive: true}).then(() => {
-        //     document.querySelectorAll('rect[data-level="0"]').forEach(el => el.style.fill = "rgba(0,0,0,0.5)");
-        //     document.querySelectorAll('rect[data-level="4"]').forEach(el => el.style.fill = "#BFCDE0");
-        //     document.querySelectorAll('rect[data-level="3"]').forEach(el => el.style.fill = "#5D5D81");
-        //     document.querySelectorAll('rect[data-level="2"]').forEach(el => el.style.fill = "#3B3355");
-        //     document.querySelectorAll('rect[data-level="1"]').forEach(el => el.style.fill = "#2f2842");
-        // });
-    // }
-
-    render() {
-        return (
-            <div className="Begin">
-                <div className="headshot">
-                    <img src="images/headshot_small.png" alt="Jon Bent"/>
+const Begin = ({changeIndex}) => {
+    return (
+        <div className="Begin">
+            <div className="description-container">
+                <img className="headshot" src="images/headshot_small.png" alt="Jon Bent"/>
+                <h4>Hey, I'm Jon</h4>
+                <div className="description">
+                    <div>
+                        <p>I'm a mostly self taught software engineer with a background in Web and Android Development. I real world work experience as an Associate Software Engineer, Android Developer and Founding Engineer whos task it was to build an iOS and Android application from scratch.</p>
+                        <p>I keep myself in grounded in technology in my off-time through multiple passion projects. Most recently I am working on an AI powered routine creation iOS/Android application utilizing React Native and OpenAI</p>
+                        <p>If you have a second, click the arrow below and check out my projects! You'll find some games, finance management applications, among some other cool stuff.</p>
+                    </div>
                 </div>
-                <div className="description-container">
-                    <div className="description">
-                        <div>Hey, I'm Jon</div>
-                        <div>A Software Engineer with a nack for troubleshooting, and an interest in anything technology</div>
-                        <div>Check out my projects!</div>
-                    </div>
-                    <div><Arrow rotate={270} onClick={() => this.props.changeIndex(1)}/></div>
-                    <div className="garden">
-                        <GitHubCalendar username="jonbent"/>
-                    </div>
+                <Arrow className="next-arrow" onClick={() => changeIndex(1)}/>
+                <div className="garden">
+                    <GitHubCalendar username="jonbent" style={{overFlowX: "scroll"}}/>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default Begin;

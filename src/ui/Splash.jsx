@@ -13,8 +13,8 @@ const Splash = ({currentPageIndex, changeIndex}) => {
     return (
         <div className="Splash" style={{transform: `translateX(-${currentPageIndex * 100}%)`}}>
             <Begin changeIndex={changeIndex}/>
-            <Projects/>
-            <Resume/>
+            <Projects changeIndex={changeIndex}/>
+            <Resume changeIndex={changeIndex}/>
         </div>
     );
 }

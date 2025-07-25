@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import ProjectItem from "./ProjectItem";
 import '../../scss/Projects.scss'
+import Arrow from "../../svg/Arrow";
 const projects = [
     {
         name: "BakedMaps",
@@ -31,8 +32,9 @@ const projects = [
         images: ['images/projects/ask-jon/queue.png', 'images/projects/ask-jon/splash.gif']
     }
 ];
-class Projects extends Component {
-    componentDidMount() {
+const Projects = ({changeIndex}) => {
+
+    useEffect(() => {
         const nav = document.querySelector('.nav');
         document.querySelector(".Projects").addEventListener('scroll', function () {
             if (this.scrollTop > 0 && nav){
@@ -42,17 +44,20 @@ class Projects extends Component {
             }
             //
         })
-    }
+    }, []);
 
-    render(){
-        return (
-            <div className="Projects">
-                {projects.map(p => {
-                    return <ProjectItem key={p.name} project={p} />
-                })}
+
+    return (
+        <div className="Projects">
+            {projects.map(p => {
+                return <ProjectItem key={p.name} project={p} />
+            })}
+            <div>
+            <Arrow className="back-arrow" onClick={() => changeIndex(0)}/>
+            <Arrow className="next-arrow" onClick={() => changeIndex(2)}/>
             </div>
-        );
-    }
+        </div>
+    );
 
 };
 

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  align-items: center;
   .react-pdf__Document{
     margin-top: 1.7rem;
   }
@@ -27,5 +28,15 @@
     left: 0;
     pointer-events: auto; /* Allows clicking links */
   }
-
+  svg{
+    margin-bottom:1rem;
+  }
+  a{
+    text-shadow: 1px 1px 3px black;
+    cursor: pointer;
+    color: #7cea9c;
+    text-decoration: none;
+    font-size: 120%;
+    margin-top: 1rem;
+  }
 }
