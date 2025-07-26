@@ -8,6 +8,7 @@
   align-items: center;
   .react-pdf__Document{
     margin-top: 1.7rem;
+    width: 100%;
   }
   .react-pdf__Page {
     height: calc(100% - 1.7rem);
