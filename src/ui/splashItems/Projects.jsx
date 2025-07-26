@@ -30,6 +30,24 @@ const projects = [
         liveUrl: "https://ask-jon.herokuapp.com/#/",
         githubUrl: "https://github.com/jonbent/AskAQuestion",
         images: ['images/projects/ask-jon/queue.png', 'images/projects/ask-jon/splash.gif']
+    },
+    {
+        name: "Mile Log",
+        description: "Track mileage and expenses for tax return purposes, this was created to be helpful for service workers in the field of doordash, Uber Eats, and Grubhub drivers, among other service jobs",
+        githubUrl: "https://github.com/jonbent/MileLog",
+        images: ['images/projects/mile-log/mile-log.png']
+    },
+    {
+        name: "Wholesale Motors",
+        description: "At one point my father had lost his advertising manager, due to him moving away. His website was no longer updated with new stock, and instead displayed cars that were unavailable due to already being sold. This website was built to take place of his website with a more modern feel.",
+        githubUrl: "https://github.com/jonbent/ws-motors",
+        images: ['images/projects/ws-motors/wsMotors.png'],
+    },
+    {
+        name: "Wholesale Motors Debt Tracker",
+        description: "My dad keeps track of all of his inhouse financing in a simple paper binder, this was an attempt to replace that functionality, and let his customers keep track of their upcoming payments/remaining debt",
+        githubUrl: "https://github.com/jonbent/ws-motors-debt",
+        images: ["images/projects/ws-motors-debt/ws-motors-debt.png"]
     }
 ];
 const Projects = ({changeIndex}) => {
@@ -49,6 +67,14 @@ const Projects = ({changeIndex}) => {
 
     return (
         <div className="Projects">
+            <h2 className="coming-soon-title">Coming Soon</h2>
+            <ProjectItem project={{
+                name: "Dumbells n Donuts React Native App",
+                description: "This is a new implementation on a past project, I am attempting to revamp the application to be deployed on iOS and Android App Stores.\n\nThis implementation will be powered by AI through OpenAI to assist in creating workout/meal routines",
+                images: ['images/projects/dumbells-n-donuts/dumbells-splash.gif']
+            }}/>
+
+            <h2 className="past-projects-title">Past Projects</h2>
             {projects.map(p => {
                 return <ProjectItem key={p.name} project={p} />
             })}

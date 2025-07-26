@@ -5,4 +5,22 @@
   .next-arrow{
     margin-left: 1rem;
   }
+  h2{
+    font-size: 150%;
+    color: #DBDBDB;
+    text-shadow: 3px 3px 6px black;
+  }
+  margin-top: 1.7rem;
+  .past-projects-title{
+    margin-bottom: 2rem;
+  }
+  .coming-soon-title{
+    margin-top: 1rem;
+  }
+  width: 100%;
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding-bottom: 2rem;
 }

@@ -19,6 +19,7 @@ class ProjectItem extends Component {
         this.startChange();
     }
     startChange(){
+        if (this.props.project.images.length <= 1) return;
         const minInt = 5000;
         const maxInt = 8000;
         const rand = Math.floor(Math.random() * (maxInt - minInt + 1) + minInt);
@@ -48,12 +49,12 @@ class ProjectItem extends Component {
                         {project.description}
                     </div>
                     <div className="actions">
-                        <div className="github-link">
+                        {project.githubUrl && <div className="github-link">
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">Github</a>
-                        </div>
-                        <div className="linked-link">
+                        </div>}
+                        {project.liveUrl && <div className="linked-link">
                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Site</a>
-                        </div>
+                        </div>}
                     </div>
                 </div>
 
